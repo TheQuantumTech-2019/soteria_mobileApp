@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:soperia_user/Screens/AuthScreen/otp_screen.dart';
+import 'package:soperia_user/Screens/SingupScreen/mobileregester_singup.dart';
 import 'package:soperia_user/Screens/SingupScreen/personal_detail_signup_screen.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
@@ -164,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               InkWell(
-                onTap: () => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => SingupScreen(),), (route) => false),
+                onTap: () => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MobileregisterScreen(),), (route) => false),
                 child: Text.rich(
                         TextSpan(children: [
                           TextSpan(text: " Don’t have an account?  ",style: TextStyle(color: primaryGrey)),

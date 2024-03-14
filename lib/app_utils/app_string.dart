@@ -30,11 +30,13 @@ const String congratulations = 'Congratulations!';
 const String congratulationsnote = 'Your account is succesfully created. You are\nnow a part of our family. Our best services\n are waiting for you!';
 const String know = 'Let Us know you more!';
 const String singupfrom = 'Please fill some information below. It will \nhelp us to know you more.';
+
 ///Home screen
 
 const String individualMedical = 'Individual Medical';
 const String life = 'Life';
 const String home = 'Home';
+const String insurance = 'Insurance';
 const String personalAccident = 'Personal Accident';
 const String travel = 'Travel';
 const String marine = 'Marine ';
@@ -42,3 +44,21 @@ const String automotive = 'Automotive ';
 const String office = 'Office ';
 const String critical = 'Critical Illness ';
 const String pet = 'pet ';
+const String mobileno = "Mobile No.";
+
+/// profile screen
+const String mypolicies = 'My Policies ';
+const String myrewards = 'My Rewards ';
+const String myclaims = 'My Claims ';
+const String contactus = 'Contact Us ';
+const String addcomplaints = 'Add Complaints ';
+const String ourwebsite = 'Our Website ';
+const String logout = 'Log Out ';
+///Home Insurance Plan Screen
+const String fullname = 'Full Name ';
+const String nationality = 'Nationality ';
+const String detailedlocation = 'Detailed Location ';
+const String apartmentsize = 'Size of Apartment or Villa ';
+const String national = 'National ID or Resident ID ';
+const String limit = 'Limit of Coverage ';
+const String appartment = 'Appartment or Villa ';

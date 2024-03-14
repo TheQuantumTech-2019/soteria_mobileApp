@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:soperia_user/Screens/AuthScreen/login_screen.dart';
 import 'package:soperia_user/Screens/AuthScreen/otp_screen.dart';
 import 'package:soperia_user/Screens/AuthScreen/select_language.dart';
+import 'package:soperia_user/Screens/SingupScreen/otp_screen_singup.dart';
 import 'package:soperia_user/Screens/SingupScreen/personal_detail_signup_screen.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
@@ -117,7 +119,7 @@ class _MobileregisterScreenState extends State<MobileregisterScreen> {
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => OtpScreen(),
+                            builder: (context) => OtpScreenSingUp(),
                           )),
                       child: Container(
                         height: 100,
@@ -172,7 +174,7 @@ class _MobileregisterScreenState extends State<MobileregisterScreen> {
                       onTap: () => Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SelectLanguage(),
+                            builder: (context) => LoginScreen(),
                           ),
                           (route) => false),
                       child: Text.rich(

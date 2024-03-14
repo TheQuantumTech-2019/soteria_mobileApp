@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:soperia_user/Screens/HomeScreen/home_screen_bottom.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
 import 'package:soperia_user/app_utils/app_text.dart';
@@ -38,28 +39,12 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(),
         body: SingleChildScrollView(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
-                  height: 50,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 35,
-                        child: Icon(Icons.arrow_back),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                    ],
-                  ),
-                ),
+
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
@@ -159,10 +144,14 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 280),
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage(nextImg)),
+                  child: InkWell(
+                    onTap: () => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => HomePageBottomNav(),),(route) => false),
+                    
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage(nextImg)),
+                      ),
                     ),
                   ),
                 ),

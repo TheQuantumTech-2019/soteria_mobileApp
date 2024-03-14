@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soperia_user/Screens/HomeScreen/home_screen_bottom.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
 import 'package:soperia_user/app_utils/app_text.dart';
@@ -37,17 +38,20 @@ class _AccountCreatedState extends State<AccountCreated> {
                 fontWeight: FontWeight.w200,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 50),
+                padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 50),
                 child: InkWell(
                   /* onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => OtpScreen(),
                       )),*/
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage(getstartedbtn)),
+                  child: InkWell(
+                    onTap: () => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => HomePageBottomNav(),),(route) => false),
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage(getstartedbtn)),
+                      ),
                     ),
                   ),
                 ),

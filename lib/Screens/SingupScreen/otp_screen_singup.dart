@@ -7,14 +7,16 @@ import 'package:soperia_user/app_utils/app_string.dart';
 import 'package:soperia_user/app_utils/app_text.dart';
 import 'package:soperia_user/app_utils/color_constrint.dart';
 
-class OtpScreen extends StatefulWidget {
-  const OtpScreen({super.key});
+import 'personal_detail_signup_screen.dart';
+
+class OtpScreenSingUp extends StatefulWidget {
+  const OtpScreenSingUp({super.key});
 
   @override
-  State<OtpScreen> createState() => _OtpScreenState();
+  State<OtpScreenSingUp> createState() => _OtpScreenSingUpState();
 }
 
-class _OtpScreenState extends State<OtpScreen> {
+class _OtpScreenSingUpState extends State<OtpScreenSingUp> {
   @override
   void initState() {
     Timer(const Duration(seconds: 60), () async {
@@ -154,12 +156,16 @@ class _OtpScreenState extends State<OtpScreen> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 280),
-                  child: Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage(nextImg)),
+                InkWell(
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SingupScreen(),)),
+
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 280),
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage(nextImg)),
+                      ),
                     ),
                   ),
                 ),

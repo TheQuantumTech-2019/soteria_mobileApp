@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:soperia_user/Screens/HomeScreen/HomeScreenMenu/HomeInsurance/home_insurance.dart';
+import 'package:soperia_user/Screens/HomeScreen/HomeScreenMenu/HomeInsurance/home_insurance_plan.dart';
+import 'package:soperia_user/Screens/HomeScreen/HomeScreenMenu/HomeInsurance/office_insurance.dart';
 import 'package:soperia_user/Screens/Profile/edit_profile.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
@@ -34,6 +37,21 @@ class _HomePageState extends State<HomePage> {
     pet,
     pet,
     pet,
+  ];
+  
+  List homescreenmenu=[
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    HomeInsurance(),
+    OfficeInsurance(),
+    HomeInsurancePlanScreen(),
+    HomeInsurance(),
   ];
 
 
@@ -132,25 +150,28 @@ class _HomePageState extends State<HomePage> {
             crossAxisCount: 3,
             physics: NeverScrollableScrollPhysics(),
             children: List.generate(10, (index) {
-              return Column(
-                children: [
-                  Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.yellow, width: 2),
-                    ),
-                    child: Center(
-                      child: Text(
-                        (index + 1).toString(),
-                        style: TextStyle(fontSize: 12),
+              return InkWell(
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => homescreenmenu[index],)),
+                child: Column(
+                  children: [
+                    Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.yellow, width: 2),
+                      ),
+                      child: Center(
+                        child: Text(
+                          (index + 1).toString(),
+                          style: TextStyle(fontSize: 12),
+                        ),
                       ),
                     ),
-                  ),
-                  AppText(text: '${texts[index]}', fontWeight: FontWeight.bold, size: 10),
-                  AppText(text: " Insurance ", fontWeight: FontWeight.bold, size: 10)
-                ],
+                    AppText(text: '${texts[index]}', fontWeight: FontWeight.bold, size: 10),
+                    AppText(text: insurance, fontWeight: FontWeight.bold, size: 10)
+                  ],
+                ),
               );
             }),
           ),

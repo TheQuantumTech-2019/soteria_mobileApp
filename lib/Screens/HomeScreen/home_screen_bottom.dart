@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:soperia_user/Screens/Profile/edit_profile.dart';
+import 'package:soperia_user/Screens/Profile/profile_screen.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
 import 'package:soperia_user/app_utils/app_text.dart';
@@ -17,11 +18,10 @@ class _HomePageBottomNavState extends State<HomePageBottomNav> {
   int bottomBarCurrentIndex = 0;
   int sliderCurrentIndex = 0;
 
-
   List<Widget> screens = [
     HomePage(),
     HomePage(),
-    EditProfileScreen(),
+    ProfileScreeen(),
   ];
 
   @override

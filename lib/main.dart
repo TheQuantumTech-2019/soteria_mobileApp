@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:soperia_user/Screens/HomeScreen/HomeScreenMenu/HomeInsurance/home_insurance_plan.dart';
+import 'package:soperia_user/Screens/HomeScreen/home_screen_bottom.dart';
+import 'package:soperia_user/Screens/Profile/profile_screen.dart';
 import 'package:soperia_user/splash_screen.dart';
-
-import 'Screens/AuthScreen/HomeScreen/home_screen.dart';
-import 'Screens/AuthScreen/HomeScreen/home_screen_bottom.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePageBottomNav(),
+      home: SplashView(),
+     // home: HomeInsurancePlanScreen(),
     );
   }
 }

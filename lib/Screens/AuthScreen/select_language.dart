@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soperia_user/Screens/AuthScreen/login_screen.dart';
+import 'package:soperia_user/Screens/SingupScreen/mobileregester_singup.dart';
 import 'package:soperia_user/Screens/SingupScreen/select_language_singup.dart';
 import 'package:soperia_user/app_utils/app_imgs.dart';
 import 'package:soperia_user/app_utils/app_string.dart';
@@ -132,7 +133,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () => Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => SingupSelectLanguage(),), (route) => false),
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MobileregisterScreen(),),),
                       child: Text.rich(
                         TextSpan(children: [
                           TextSpan(text: " Don’t have an account?  ",style: TextStyle(color: primaryGrey)),
